@@ -1,3 +1,21 @@
+##Steps to rebuild Jar
+
+* Checkout the repo
+
+        git clone git@github.com:trexglobal/mongo-java-driver.git
+        cd mongo-java-driver
+        git checkout r2.6.5-trex-fix
+
+* Build jar file
+
+        sudo apt-add-repository ppa:webupd8team/java
+        sudo apt-get update
+        sudo apt-get install oracle-java6-installer
+        sudo apt-get install ant
+        ant jar
+
+* `mongo.jar` file will be create which then can be added to our Simplifyem repo path `lib/DatabaseJSONizer/lib/`
+
 ## Release Notes
 
 Release notes are available [here](https://github.com/mongodb/mongo-java-driver/releases).
