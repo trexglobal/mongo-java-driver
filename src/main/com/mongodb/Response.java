@@ -40,7 +40,7 @@ class Response {
 
         ByteArrayInputStream bin = new ByteArrayInputStream( b );
         _len = Bits.readInt( bin );
-        if ( _len > ( 64 * 1024 * 1024 ) )
+        if ( _len > ( 128 * 1024 * 1024 ) )
         	throw new IllegalArgumentException( "response too long: " + _len );
 
         _id = Bits.readInt( bin );
